@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuação do Mini Projeto</title>
-    <link rel="stylesheet" href="./css/styles.css"/>
+    <title>Perguntas</title>
+    <link rel="stylesheet" href="./css/stylesPerguntas.css"/>
 </head>
 <body>
     <div class="container">
@@ -13,78 +13,47 @@
         </header>
 
         <main>
-            <section class="info-aluno">
-                <h2>Informações do Aluno</h2>
-
-                <p id="nome">
-                    <strong>Nome: </strong>João da Silva
-                </p>
-
-                <p id="idade">
-                    <strong>Idade: </strong>16 anos
-                </p>
-
-                <p id="serie">
-                    <strong>Série: </strong>2º ano do Ensino Médio
-                </p>
-
-                <p id="escola">
-                    <strong>Escola: </strong>Escola Estadual Professor José
-                </p>
-
-                <p id="materiaFavorita">
-                    <strong>Máteria Favorita: </strong>Matemática
-                </p>
-            </section>
-
-            <section class="notas">
-                <div class="box-notas-linhas">
-                    <h2>Notas das Máterias</h2>
-                    <button onclick="novaLinha()">Adicionar Linha</button>
+            <div class="form">
+                <div class="box-input">
+                    <input type="text" id="nomeDados" placeholder="Nome" required/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="idadeDados" placeholder="Idade" required/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="serieDados" placeholder="Série" required/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="escolaDados" placeholder="Escola" required/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="materiaDados" placeholder="Matéria Favorita" required/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="cepDados" placeholder="CEP" required oninput="inserirEnderecoCampo()"/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="ruaDados" placeholder="Rua" disabled/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="cidadeDados" placeholder="Cidade" disabled/>
+                </div>
+    
+                <div class="box-input">
+                    <input type="text" id="estadoDados" placeholder="Estado" disabled/>
                 </div>
 
-                <table>
-                    <thead>
-                        <th>Matéria</th>
-                        <th>Nota 1</th>
-                        <th>Nota 2</th>
-                        <th>Nota 3</th>
-                        <th>Nota 4</th>
-                        <th>Média</th>
-                      </tr>
-                    </thead>
-            
-                    <tbody>
-                        <!-- <tr>
-                            <td>Física</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td id="mediaMateria">10</td>
-                        </tr> -->
-                    </tbody>
-                </table>
-            </section>
-
-            <section class="box-media-geral">
-                <h2>Média Geral do Aluno</h2>
-                <p>A média geral do aluno é: <span id="media-geral">7.6</span></p>
-            </section>
-
-            <section class="box-maior-media">
-                <h2>Maior Média entre as Matérias</h2>
-                <p>A maior média entre as matérias é <span id="maior-media">7.6</span></p>
-            </section>
-
-            <section class="box-lista-alunos">
-                <h2>Listas de Alunos</h2>
-                <ul id="lista-alunos">
-                    <li>João da Silva</li>
-                    <li>Maria Oliveira</li>
-                    <li>José Santos</li>
-                </ul>
-            </section>
+                <div class="box-input">
+                    <button onclick="pegarDadosAluno()">Enviar</button>
+                </div>
+            </div>
         </main>
     </div>
 
